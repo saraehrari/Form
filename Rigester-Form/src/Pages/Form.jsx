@@ -14,33 +14,33 @@ export default  function Form() {
     return(
       <div>
         <h1>Welcom in Rigester Form</h1>
-        <Form>
+        <form>
             <label>Name:</label>
             <input type="text"
-            value={form}
+            value={form.name}
             onChange={(e)=> setForm(e.target.value)}
             />
 
               <label>Email:</label>
             <input type="email"
-            value={form}
+            value={form.email}
             onChange={(e)=> setForm(e.target.value)}
             />
 
               <label>Password:</label>
             <input type="password"
-            value={form}
+            value={form.passwoed}
             onChange={(e)=> setForm(e.target.value)}
             />
 
               <label>Confirm Password:</label>
             <input type="password"
-            value={form}
+            value={form.confirmPassword}
             onChange={(e)=> setForm(e.target.value)}
             />
 
             <button>Rigester</button>
-        </Form>
+        </form>
 
         </div>
     )
