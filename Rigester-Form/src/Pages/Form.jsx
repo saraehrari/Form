@@ -9,6 +9,29 @@ export default  function Form() {
         confirmPassword:"",
     });
 
+    const [error , setError] = useState({});
+
+    const formVlidation = ()=>{
+
+        const newErrors= {}
+
+          if (!form.name1.trim()) {
+      newErrors.name = "Name is required!";
+    }
+    
+    if(!form.email.trim()){
+        newErrors.email= "Email is requird!"
+
+    }
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/(form.email)){
+     newErrors.email="Email is invalid"
+    }
+    
+        
+    }
+
+  
+
     return(
       <div>
         <h1>Welcom in Rigester Form</h1>
