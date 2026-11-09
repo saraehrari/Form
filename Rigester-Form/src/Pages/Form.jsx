@@ -34,10 +34,10 @@ export default  function Form() {
               <label>Confirm Password:</label>
             <input type="password"
             value={form.confirmPassword}
-            onChange={(e)=> setForm(e.target.value)}
+            onChange={(e)=> setForm({...form,confirmPassword:e.target.value})}
             />
 
-            <button>Rigester</button>
+            <button type="submit">Rigester</button>
         </form>
 
         </div>
