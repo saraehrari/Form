@@ -3,13 +3,11 @@ import { useState } from "react";
 export default  function Form() {
 
     const [form , setForm] = useState({
-        name:"",
+        name1:"",
         email:"",
         passwoed:"",
         confirmPassword:"",
     });
-
-
 
     return(
       <div>
@@ -17,14 +15,14 @@ export default  function Form() {
         <form>
             <label>Name:</label>
             <input type="text"
-            value={form.name}
-            onChange={(e)=> setForm(e.target.value)}
+            value={form.name1}
+            onChange={(e)=> setForm({...form ,name1:e.target.value})}
             />
 
               <label>Email:</label>
             <input type="email"
             value={form.email}
-            onChange={(e)=> setForm(e.target.value)}
+            onChange={(e)=> setForm({...form, email:e.target.value})}
             />
 
               <label>Password:</label>
