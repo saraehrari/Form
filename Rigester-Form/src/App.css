@@ -1,0 +1,154 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0914;
+}
+
+/* Main Container */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background:
+    radial-gradient(circle at top left, #492477 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #29205c 0%, transparent 35%),
+    #0b0914;
+}
+
+/* Form Card */
+.form-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 35px;
+  background: rgba(23, 19, 36, 0.95);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+.form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form-header h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: #a49bb8;
+  font-size: 13px;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+
+.input-group label {
+  color: #e8e2f5;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+/* Inputs */
+.input-group input {
+  width: 100%;
+  padding: 14px 15px;
+  background: #100d1b;
+  border: 1px solid #393149;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #716982;
+}
+
+.input-group input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+/* Error Messages */
+.error {
+  color: #fb7185;
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+/* Register Button */
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+}
+
+.register-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.form-footer {
+  text-align: center;
+  color: #a49bb8;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.form-footer span {
+  color: #a78bfa;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-footer span:hover {
+  color: #c4b5fd;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 30px 22px;
+  }
+
+  .form-header h1 {
+    font-size: 24px;
+  }
+}
