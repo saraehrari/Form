@@ -42,15 +42,29 @@ export default  function Form() {
     else if(form.confirmPassword !== form.password){
       newErrors.confirmPassword ="Password do not Match"
     }
-    }
 
-     setError(newErrors);
-  
+
+     return Object.keys(newErrors).length===0;
+      
+   
+
+    } 
+    setError(newErrors);
+    
+    
+
+    const handleSubmit=(e)=>{
+      e.preventDefault();
+     }
+
+     if(formVlidation){
+      alert("Registration successful!")
+     }
 
     return(
       <div>
         <h1>Welcom in Rigester Form</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Name:</label>
             <input type="text"
             value={form.name1}
@@ -63,17 +77,22 @@ export default  function Form() {
             onChange={(e)=> setForm({...form, email:e.target.value})}
             />
 
+               {error.name}
+
               <label>Password:</label>
             <input type="password"
             value={form.passwoed}
             onChange={(e)=> setForm(e.target.value)}
             />
+                {error.name}
 
               <label>Confirm Password:</label>
             <input type="password"
             value={form.confirmPassword}
             onChange={(e)=> setForm({...form,confirmPassword:e.target.value})}
             />
+
+                {error.name}
 
             <button type="submit">Rigester</button>
         </form>
