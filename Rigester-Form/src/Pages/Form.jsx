@@ -66,46 +66,83 @@ export default  function Form() {
     setError({});
   }
 };
-    }
+    
      
 
-    return(
-      <div>
-        <h1>Welcom in Rigester Form</h1>
+    return (
+    <div className="form-container">
+      <div className="form-card">
+        <div className="form-header">
+          <h1>Create Account</h1>
+          <p>Join us and start your journey today.</p>
+        </div>
+
         <form onSubmit={handleSubmit}>
-            <label>Name:</label>
-            <input type="text"
-            value={form.name1}
-            onChange={(e)=> setForm({...form ,name1:e.target.value})}
+          <div className="input-group">
+            <label>Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={form.name1}
+              onChange={(e) =>
+                setForm({ ...form, name1: e.target.value })
+              }
             />
+            {error.name && <span className="error">{error.name}</span>}
+          </div>
 
-             {error.name}
-
-              <label>Email:</label>
-            <input type="email"
-            value={form.email}
-            onChange={(e)=> setForm({...form, email:e.target.value})}
+          <div className="input-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={form.email}
+              onChange={(e) =>
+                setForm({ ...form, email: e.target.value })
+              }
             />
+            {error.email && <span className="error">{error.email}</span>}
+          </div>
 
-               {error.email}
-
-              <label>Password:</label>
-            <input type="password"
-            value={form.password}
-            onChange={(e)=> setForm({ form,password:e.target.value})}
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Create a password"
+              value={form.password}
+              onChange={(e) =>
+                setForm({ ...form, password: e.target.value })
+              }
             />
-                {error.password}
+            {error.password && (
+              <span className="error">{error.password}</span>
+            )}
+          </div>
 
-              <label>Confirm Password:</label>
-            <input type="password"
-            value={form.confirmPassword}
-            onChange={(e)=> setForm({...form,confirmPassword:e.target.value})}
+          <div className="input-group">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm your password"
+              value={form.confirmPassword}
+              onChange={(e) =>
+                setForm({ ...form, confirmPassword: e.target.value })
+              }
             />
+            {error.confirmPassword && (
+              <span className="error">{error.confirmPassword}</span>
+            )}
+          </div>
 
-                {error.confirmPassword}
-
-            <button type="submit">Rigester</button>
+          <button type="submit" className="register-btn">
+            Create Account
+          </button>
         </form>
 
-        </div>
-    )
+        <p className="form-footer">
+          Already have an account? <span>Sign in</span>
+        </p>
+      </div>
+    </div>
+  );}
+  
