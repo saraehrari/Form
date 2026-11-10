@@ -15,11 +15,11 @@ export default  function Form() {
 
         const newErrors= {}
 
-          if (!form.name1.trim()) {
+          if (!form.name1) {
       newErrors.name = "Name is Required!";
     }
     
-    if(!form.email.trim()){
+    if(!form.email){
         newErrors.email= "Email is Requird!"
 
     }
@@ -27,7 +27,7 @@ export default  function Form() {
      newErrors.email="Email is Invalid!"
     }
      
-    if(!form.password.trim()){
+    if(!form.password){
       newErrors.password = "Password is Requried!"
     } 
     
@@ -35,7 +35,7 @@ export default  function Form() {
       newErrors.password = "Password is Invalid!"
     }
 
-    if (!form.confirmPassword.trim()){
+    if (!form.confirmPassword){
       newErrors.confirmPassword = "Confirm Password is Requried"
     }
 
@@ -57,7 +57,16 @@ export default  function Form() {
       alert("Registration successful!")
      }
      }
+    const handleReset = ()=>{
+      setForm({
+    name1: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
+  setError({})
+    }
      
 
     return(
@@ -82,7 +91,7 @@ export default  function Form() {
 
               <label>Password:</label>
             <input type="password"
-            value={form.passwoed}
+            value={form.password}
             onChange={(e)=> setForm({ form,password:e.target.value})}
             />
                 {error.password}
@@ -95,7 +104,7 @@ export default  function Form() {
 
                 {error.confirmPassword}
 
-            <button type="submit">Rigester</button>
+            <button type="submit" onSubmit={handleReset}>Rigester</button>
         </form>
 
         </div>
