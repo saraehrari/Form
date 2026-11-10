@@ -42,14 +42,14 @@ export default  function Form() {
     else if(form.confirmPassword !== form.password){
       newErrors.confirmPassword ="Password do not Match"
     }
-
+     setError(newErrors);
 
      return Object.keys(newErrors).length===0;
       
    
 
     } 
-    setError(newErrors);
+   
     
     
 
@@ -71,20 +71,22 @@ export default  function Form() {
             onChange={(e)=> setForm({...form ,name1:e.target.value})}
             />
 
+             {error.name}
+
               <label>Email:</label>
             <input type="email"
             value={form.email}
             onChange={(e)=> setForm({...form, email:e.target.value})}
             />
 
-               {error.name}
+               {error.email}
 
               <label>Password:</label>
             <input type="password"
             value={form.passwoed}
-            onChange={(e)=> setForm(e.target.value)}
+            onChange={(e)=> setForm({ form,password:e.target.value})}
             />
-                {error.name}
+                {error.password}
 
               <label>Confirm Password:</label>
             <input type="password"
@@ -92,7 +94,7 @@ export default  function Form() {
             onChange={(e)=> setForm({...form,confirmPassword:e.target.value})}
             />
 
-                {error.name}
+                {error.confirmPassword}
 
             <button type="submit">Rigester</button>
         </form>
