@@ -57,7 +57,7 @@ export default  function Form() {
       e.preventDefault();
      }
 
-     if(formVlidation){
+     if(formVlidation()){
       alert("Registration successful!")
      }
 
