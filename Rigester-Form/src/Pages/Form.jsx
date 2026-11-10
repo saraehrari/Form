@@ -31,7 +31,7 @@ export default  function Form() {
       newErrors.password = "Password is Requried!"
     } 
     
-    else if (form.password<6){
+    else if (form.password.length <6){
       newErrors.password = "Password is Invalid!"
     }
 
