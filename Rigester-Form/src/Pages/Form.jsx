@@ -56,13 +56,6 @@ export default  function Form() {
       if(formVlidation()){
       alert("Registration successful!")
      }
-     
-     setForm({
-      name1: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
      }
 
      
