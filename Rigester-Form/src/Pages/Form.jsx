@@ -104,7 +104,7 @@ export default  function Form() {
 
                 {error.confirmPassword}
 
-            <button type="submit" onSubmit={handleReset}>Rigester</button>
+            <button onSubmit={handleReset}>Rigester</button>
         </form>
 
         </div>
