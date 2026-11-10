@@ -5,7 +5,7 @@ export default  function Form() {
     const [form , setForm] = useState({
         name1:"",
         email:"",
-        passwoed:"",
+        password:"",
         confirmPassword:"",
     });
 
@@ -16,20 +16,35 @@ export default  function Form() {
         const newErrors= {}
 
           if (!form.name1.trim()) {
-      newErrors.name = "Name is required!";
+      newErrors.name = "Name is Required!";
     }
     
     if(!form.email.trim()){
-        newErrors.email= "Email is requird!"
+        newErrors.email= "Email is Requird!"
 
     }
     else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/(form.email)){
-     newErrors.email="Email is invalid"
+     newErrors.email="Email is Invalid!"
     }
+     
+    if(!form.password.trim()){
+      newErrors.password = "Password is Requried!"
+    } 
     
-        
+    else if (form.password<6){
+      newErrors.password = "Password is Invalid!"
     }
 
+    if (!form.confirmPassword.trim()){
+      newErrors.confirmPassword = "Confirm Password is Requried"
+    }
+
+    else if(form.confirmPassword !== form.password){
+      newErrors.confirmPassword ="Password do not Match"
+    }
+    }
+
+     setError(newErrors);
   
 
     return(
