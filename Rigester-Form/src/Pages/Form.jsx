@@ -23,7 +23,7 @@ export default  function Form() {
         newErrors.email= "Email is Requird!"
 
     }
-    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/(form.email)){
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)){
      newErrors.email="Email is Invalid!"
     }
      
