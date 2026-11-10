@@ -50,16 +50,22 @@ export default  function Form() {
 
     } 
    
-    
-    
-
     const handleSubmit=(e)=>{
       e.preventDefault();
-     }
-
-     if(formVlidation()){
+      
+      if(formVlidation()){
       alert("Registration successful!")
      }
+     
+     setForm({
+      name1: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+     }
+
+     
 
     return(
       <div>
