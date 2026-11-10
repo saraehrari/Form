@@ -50,22 +50,22 @@ export default  function Form() {
 
     } 
    
-    const handleSubmit=(e)=>{
-      e.preventDefault();
-      
-      if(formVlidation()){
-      alert("Registration successful!")
-     }
-     }
-    const handleReset = ()=>{
-      setForm({
-    name1: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+   const handleSubmit = (e) => {
+  e.preventDefault();
 
-  setError({})
+  if (formVlidation()) {
+    alert("Registration successful!");
+
+    setForm({
+      name1: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+
+    setError({});
+  }
+};
     }
      
 
@@ -104,9 +104,8 @@ export default  function Form() {
 
                 {error.confirmPassword}
 
-            <button onSubmit={handleReset}>Rigester</button>
+            <button type="submit">Rigester</button>
         </form>
 
         </div>
     )
-}
