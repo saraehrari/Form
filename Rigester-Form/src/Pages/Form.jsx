@@ -40,4 +40,14 @@ if(!form.password.trim()){
     NewError.confirmpassword="Confrim Password do not Match"
    }
 
-};
+  };
+
+  const handleSubmit=(e)=>{
+  e.preventDefault();
+
+  const NewError = Validation();
+
+  if(Object.keys.length===0){
+    
+  }
+  }
