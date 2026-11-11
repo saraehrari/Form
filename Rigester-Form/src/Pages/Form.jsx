@@ -27,8 +27,6 @@ NewError.email="Email is Requried!"}
   NewError.email="Please enter a valid email address!"
  }
 
-
-
 if(!form.password.trim()){
   NewError.password="Password is Requried!"}
    else if (form.password.length< 8){
