@@ -52,10 +52,10 @@ if(!form.password.trim()){
 
     setForm({
    name1:"",
-  lastname:"",
-  email:"",
-  password:"",
-  confirmpassword:""
+   lastname:"",
+   email:"",
+   password:"",
+   confirmpassword:""
 
     })
    setError({});
@@ -66,5 +66,52 @@ if(!form.password.trim()){
   }
   
   return(
-    
+    <form onSubmit={handleSubmit} >
+     <label>Name:</label>
+     <input type="text" 
+     value={form}
+      onChange={(e) =>
+     setForm({...form,name1:e.target.value})
+      }
+     />
+
+      <label>Last Name:</label>
+     <input type="text" 
+     value={form}
+      onChange={(e) =>
+     setForm({...form,lastname:e.target.value})
+      }
+     />
+
+      <label>Email:</label>
+     <input type="email" 
+     value={form}
+      onChange={(e) =>
+     setForm({...form,email:e.target.value})
+      }
+     />
+
+      <label>Password:</label>
+     <input type="paswword" 
+     value={form}
+      onChange={(e) =>
+     setForm({...form,paswword:e.target.value})
+      }
+     />
+
+      <label>Confrim Password:</label>
+     <input type="paswword" 
+     value={form}
+      onChange={(e) =>
+     setForm({...form,confirmpassword:e.target.value})
+      }
+     />
+
+
+
+
+
+
+
+    </form>
   )
