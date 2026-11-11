@@ -9,6 +9,8 @@ const [form, setForm] = useState({
   password:"",
   confirmpassword:""
 });
+const[error, setError] = useState({});
+
  function Validation(){
   const NewError=({})
 
@@ -74,14 +76,15 @@ if(!form.password.trim()){
      setForm({...form,name1:e.target.value})
       }
      />
-
+      {error.name1}
       <label>Last Name:</label>
      <input type="text" 
      value={form}
       onChange={(e) =>
      setForm({...form,lastname:e.target.value})
       }
-     />
+     />  
+     {error.lastname}
 
       <label>Email:</label>
      <input type="email" 
@@ -90,6 +93,7 @@ if(!form.password.trim()){
      setForm({...form,email:e.target.value})
       }
      />
+     {error.email}
 
       <label>Password:</label>
      <input type="paswword" 
@@ -98,6 +102,7 @@ if(!form.password.trim()){
      setForm({...form,paswword:e.target.value})
       }
      />
+     {error.password}
 
       <label>Confrim Password:</label>
      <input type="paswword" 
@@ -107,7 +112,7 @@ if(!form.password.trim()){
       }
      />
 
-
+     {error.confirmpassword}
 
 
 
