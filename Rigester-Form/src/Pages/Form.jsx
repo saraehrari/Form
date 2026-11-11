@@ -9,8 +9,19 @@ const [form, setForm] = useState({
   password:"",
   confirmpassword:"",
 });
+ function Validation(){
+  const NewError=({})
 
-function Validation(){
-  const NewError=({});
+
+if (!form.name1.trim()){
+ NewError.name1="Name is Requried!"
+}
+
+if(!form.lastname.trim()){
+  NewError.lastname="Last Name is Requuried!"
+}
+
+if(!form.password.trim()){
+  NewError.password="Password is Requried!"
+}
 };
-
