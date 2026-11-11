@@ -59,6 +59,9 @@ if(!form.password.trim()){
 
     })
    setError({});
-    
+
+  }  else {
+    setError(NewError);
   }
   }
+  
