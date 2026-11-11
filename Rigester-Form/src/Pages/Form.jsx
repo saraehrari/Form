@@ -48,6 +48,6 @@ if(!form.password.trim()){
   const NewError = Validation();
 
   if(Object.keys.length===0){
-    
+    alert("Registration Successful!")
   }
   }
