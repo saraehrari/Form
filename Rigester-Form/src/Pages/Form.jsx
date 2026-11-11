@@ -7,7 +7,7 @@ const [form, setForm] = useState({
   lastname:"",
   email:"",
   password:"",
-  confirmpassword:"",
+  confirmpassword:""
 });
  function Validation(){
   const NewError=({})
@@ -49,5 +49,16 @@ if(!form.password.trim()){
 
   if(Object.keys.length===0){
     alert("Registration Successful!")
+
+    setForm({
+   name1:"",
+  lastname:"",
+  email:"",
+  password:"",
+  confirmpassword:""
+
+    })
+   setError({});
+    
   }
   }
