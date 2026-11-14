@@ -67,56 +67,67 @@ if(!form.password.trim()){
   }
   }
   
-  return(
-    <form onSubmit={handleSubmit} >
-     <label>Name:</label>
-     <input type="text" 
-     value={form}
-      onChange={(e) =>
-     setForm({...form,name1:e.target.value})
-      }
-     />
-      {error.name1}
+  return (
+  <div className="page-container">
+    <form className="register-form" onSubmit={handleSubmit}>
+
+      <h1>Create Account</h1>
+      <p className="form-subtitle">
+        Join us and start your journey today.
+      </p>
+
+      <label>Name:</label>
+      <input
+        type="text"
+        value={form.name1}
+        onChange={(e) =>
+          setForm({ ...form, name1: e.target.value })
+        }
+      />
+      <span className="error">{error.name1}</span>
+
       <label>Last Name:</label>
-     <input type="text" 
-     value={form}
-      onChange={(e) =>
-     setForm({...form,lastname:e.target.value})
-      }
-     />  
-     {error.lastname}
+      <input
+        type="text"
+        value={form.lastname}
+        onChange={(e) =>
+          setForm({ ...form, lastname: e.target.value })
+        }
+      />
+      <span className="error">{error.lastname}</span>
 
       <label>Email:</label>
-     <input type="email" 
-     value={form}
-      onChange={(e) =>
-     setForm({...form,email:e.target.value})
-      }
-     />
-     {error.email}
+      <input
+        type="email"
+        value={form.email}
+        onChange={(e) =>
+          setForm({ ...form, email: e.target.value })
+        }
+      />
+      <span className="error">{error.email}</span>
 
       <label>Password:</label>
-     <input type="paswword" 
-     value={form}
-      onChange={(e) =>
-     setForm({...form,paswword:e.target.value})
-      }
-     />
-     {error.password}
+      <input
+        type="password"
+        value={form.password}
+        onChange={(e) =>
+          setForm({ ...form, password: e.target.value })
+        }
+      />
+      <span className="error">{error.password}</span>
 
-      <label>Confrim Password:</label>
-     <input type="paswword" 
-     value={form}
-      onChange={(e) =>
-     setForm({...form,confirmpassword:e.target.value})
-      }
-     />
+      <label>Confirm Password:</label>
+      <input
+        type="password"
+        value={form.confirmpassword}
+        onChange={(e) =>
+          setForm({ ...form, confirmpassword: e.target.value })
+        }
+      />
+      <span className="error">{error.confirmpassword}</span>
 
-     {error.confirmpassword}
-
-
-
-
+      <button type="submit">Create Account</button>
 
     </form>
-  )
+  </div>
+);
