@@ -2,6 +2,7 @@ import { useState } from "react";
 
 
 
+
 const [form, setForm] = useState({
   name1:"",
   lastname:"",
@@ -12,7 +13,8 @@ const [form, setForm] = useState({
 const[error, setError] = useState({});
 
  function Validation(){
-  const NewError=({})
+
+  const NewError={}
 
 
 if (!form.name1.trim()){
@@ -41,7 +43,7 @@ if(!form.password.trim()){
    else if(form.password !== form.confirmpassword){
     NewError.confirmpassword="Confrim Password do not Match"
    }
-
+   return NewError;
   };
 
   const handleSubmit=(e)=>{
@@ -49,7 +51,7 @@ if(!form.password.trim()){
 
   const NewError = Validation();
 
-  if(Object.keys.length===0){
+  if(Object.keys(NewError).length===0){
     alert("Registration Successful!")
 
     setForm({
